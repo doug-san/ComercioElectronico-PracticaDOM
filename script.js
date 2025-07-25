@@ -24,4 +24,15 @@ document.addEventListener('DOMContentLoaded', function() {
             menuDepartamentos.classList.remove('show');
         }
     });
+    const btn = document.getElementById('btn-departamentos');
+  const menu = document.getElementById('menu-departamentos');
+
+  btn.addEventListener('click', () => {
+    // Si está oculto, mostrar; si está visible, ocultar
+    if (menu.style.display === 'none' || menu.style.display === '') {
+      menu.style.display = 'block';  // Mostrar el menú
+    } else {
+      menu.style.display = 'none';   // Ocultar el menú
+    }
+  });
 });
