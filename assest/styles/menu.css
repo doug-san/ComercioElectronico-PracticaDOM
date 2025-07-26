@@ -1,0 +1,165 @@
+/* --------------------------------------- */
+/* --- Estilos para paginas categorias --- */
+/* --------------------------------------- */
+/*--Viento, Percusión, Guitaras, Accesorios, Pianos-*/
+
+/* --- Estilos para la Sección de Grid de Productos --- */
+
+.featured-product {
+    margin: 0.7rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+}
+.product-grid-section {
+    margin: 3rem 0;
+}
+
+.slider-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.slider-header h2 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+/* Contenedor del Grid */
+.product-grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+/* Tarjeta de producto individual */
+.product-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 1px;
+    display: flex;
+    flex-direction: column;
+    position: relative; /* Necesario para las etiquetas */
+    text-decoration: none; /* Quita el subrayado del enlace */
+    color: inherit; /* Hereda el color de texto normal */
+    transition: box-shadow 0.3s ease; /* Transición para la sombra */
+}
+
+.product-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1.1;
+    object-fit: contain;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.product-info {
+    padding: 1rem;
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+}
+
+.product-info .brand {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.product-info .title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0.25rem 0;
+    min-height: 40px; 
+    flex-grow: 1; /* Empuja los precios y el botón hacia abajo */
+    transition: transform 0.3s ease;
+}
+
+
+/* Sección de precios */
+.price-section {
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.price-section .original-price {
+    text-decoration: line-through;
+    color: #6c757d;
+}
+
+.price-section .sale-price {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.discount-badge {
+    background-color: #dc3545; /* Rojo */
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.product-info .installments {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 0.5rem;
+}
+
+/* Botón de Agregar al carrito */
+.add-to-cart-btn {
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    margin-top: auto; /* Empuja el botón al fondo de .product-info */
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* --- efecto hover unificado --- */
+.product-card:hover {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.product-card:hover img {
+    transform: scale(1.03);
+}
+.product-card:hover .title {
+    color: var(--color-primary);
+}
+.product-card:hover .add-to-cart-btn {
+    background-color: #06156b; /* un azul mas oscuro */
+}
+
+/* --- haciendo el grid responsivo --- */
+
+@media (max-width: 1200px) {
+    .product-grid-container {
+        grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    }
+}
+@media (max-width: 992px) {
+    .product-grid-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    }
+}
+@media (max-width: 768px) {
+    .product-grid-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    }
+}
