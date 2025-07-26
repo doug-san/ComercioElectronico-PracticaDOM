@@ -70,11 +70,11 @@
 
     <main>
         <div class="container">
-            <div class="box box-1" style="--img: url(../../img/trompeta.jpg);" data-text="Vientos"></div>
+            <div class="box box-1" style="--img: url(../../img/trompeta.jpg);" data-text="Vientos" ></div>
             <div class="box box-2" style="--img: url(../../img/caja.jpg);" data-text="Percusion"></div>
             <div class="box box-3" style="--img: url(../../img/Piano.jpg);" data-text="Pianos"></div>
-            <div class="box box-4" style="--img: url(../../img/guitarra.jpg);" data-text="Guitarras"></div>
-            <div class="box box-5" style="--img: url(../../img/accesorios.jpg);" data-text="Accesorios"></div>
+            <div class="box box-4" style="--img: url(../../img/guitarra.jpg);" data-text="Guitarras" data-link="categoriaGuitaras.html"></div>
+            <div class="box box-5" style="--img: url(../../img/accesorios.jpg);" data-text="Accesorios"  data-link="CategoriaAcesorios.html"></div>
         </div>
 
         <section class="nosotros">
@@ -155,6 +155,16 @@
     </footer>
 
     <script src="script.js"></script>
+<script>
+  document.querySelectorAll('.box').forEach(box => {
+    box.addEventListener('click', () => {
+      const url = box.getAttribute('data-link');
+      if (url) {
+        window.location.href = url;
+      }
+    });
+  });
+</script>
 </body>
 
 </html>
