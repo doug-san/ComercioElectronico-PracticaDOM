@@ -2,37 +2,50 @@
 // Espera a que todo el contenido de la página se cargue.
 document.addEventListener('DOMContentLoaded', function() {
 
-    // 1. Selecciona el botón y el menú usando sus IDs.
-    const botonDepartamentos = document.getElementById('btn-departamentos');
-    const menuDepartamentos = document.getElementById('menu-departamentos');
+    /* =============================================
+       FUNCIONALIDAD DEL MENÚ DE CATEGORÍAS
+       ============================================= */
 
-    // 2. Añade un "escuchador" para el evento 'clic' en el botón.
-    botonDepartamentos.addEventListener('click', function(event) {
-        // Previene que el enlace '#' recargue la página.
-        event.preventDefault(); 
+    // 1. Selecciona el botón y el menú por sus IDs correctos.
+    const botonCategorias = document.getElementById('btn-categorias');
+    const menuCategorias = document.getElementById('menu-categorias');
+
+    // Se asegura de que el código solo se ejecute si el menú existe en la página.
+    if (botonCategorias && menuCategorias) {
         
-        // 3. Añade o quita la clase 'show' al menú.
-        // .toggle() es un atajo que hace exactamente eso.
-        menuDepartamentos.classList.toggle('show');
-    });
+        // 2. Añade el evento 'click' al botón.
+        botonCategorias.addEventListener('click', function(event) {
+            // Previene que el enlace '#' recargue la página.
+            event.preventDefault(); 
+            
+            // 3. Añade o quita la clase 'show' para mostrar/ocultar el menú.
+            menuCategorias.classList.toggle('show');
+        });
 
-    // Opcional: Cierra el menú si se hace clic en cualquier otro lugar de la página.
-    window.addEventListener('click', function(event) {
-        // Si el clic NO fue en el botón de departamentos...
-        if (!botonDepartamentos.contains(event.target)) {
-            // ...entonces quita la clase 'show' para ocultar el menú.
-            menuDepartamentos.classList.remove('show');
-        }
-    });
-    const btn = document.getElementById('btn-departamentos');
-  const menu = document.getElementById('menu-departamentos');
-
-  btn.addEventListener('click', () => {
-    // Si está oculto, mostrar; si está visible, ocultar
-    if (menu.style.display === 'none' || menu.style.display === '') {
-      menu.style.display = 'block';  // Mostrar el menú
-    } else {
-      menu.style.display = 'none';   // Ocultar el menú
+        // 4. Cierra el menú si se hace clic en cualquier otro lugar de la página.
+        window.addEventListener('click', function(event) {
+            // Si el clic NO fue en el área del botón...
+            if (!botonCategorias.contains(event.target)) {
+                // ...entonces quita la clase 'show' para ocultar el menú.
+                menuCategorias.classList.remove('show');
+            }
+        });
     }
-  });
+
+
+    /* =============================================
+       FUNCIONALIDAD DEL BOTÓN DE SUSCRIPCIÓN
+       ============================================= */
+    const subscribeBtn = document.getElementById('subscribe-button');
+    const subscribeMsg = document.getElementById('subscribe-message');
+
+    if (subscribeBtn && subscribeMsg) {
+        subscribeBtn.addEventListener('click', function() {
+            // Cambiamos el texto del párrafo.
+            subscribeMsg.textContent = '¡Gracias por suscribirte! 🎉';
+            // Cambiamos el color para más feedback visual.
+            subscribeMsg.style.color = '#33FF57';
+        });
+    }
+
 });

@@ -116,43 +116,93 @@ img {
 }
 
 /* ------------------- */
-/* NAVEGACION */
+/* NAVEGACION ADAPTATIVA */
 /* ------------------- */
 .main-nav {
-    background-color: #003f51; /* NAV fondo oscuro */
+    background-color: #003f51;
     padding: 0.5rem 5%;
 }
-.main-nav ul {
+
+.main-nav > ul {
     display: flex;
-    justify-content: flex-end; /* Alineado a la derecha */
+    justify-content: center; /* Centra los items en la barra */
     align-items: center;
-    gap: 2rem;
+    gap: 1.5rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
+
+/* Estilo general para todos los enlaces de la barra */
 .main-nav ul a {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    font-family: var(--font-body);
     font-weight: 600;
     font-size: 1.1rem;
     color: white;
     padding: 0.5rem 1rem;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-decoration: none;
 }
+
 .main-nav ul a:hover {
     background-color: #00bcd4;
     color: #000;
 }
-.nav-servicios a {
-    font-size: 1.2rem;
+
+/* --- ESTILOS POR DEFECTO (VISTA MÓVIL) --- */
+
+/* 1. Por defecto, OCULTAMOS los enlaces de escritorio. */
+/* ¡ESTA REGLA ES CLAVE! */
+.nav-desktop-link {
+    display: none;
 }
-.nav-servicios {
-    margin-left: auto;
+
+/* 2. Mostramos el botón de menú móvil y lo preparamos */
+.nav-mobile-btn {
+    display: block; /* Aseguramos que sea visible */
+    position: relative;
+    margin-left: auto; /* Empuja el botón del menú a la derecha */
 }
-.nav-separator {
-    color: #ced4da;
-    font-size: 1.2rem;
+
+/* 3. Estilos del menú desplegable (oculto por defecto) */
+.dropdown-menu {
+    display: none; /* Oculto por defecto */
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #003f51;
+    border: 1px solid #00bcd4;
+    border-radius: 5px;
+    padding: 0.5rem 0;
+    min-width: 200px;
+    z-index: 1000;
+    flex-direction: column;
+}
+
+/* 4. Clase 'show' de JS para mostrar el menú */
+.dropdown-menu.show {
+    display: flex;
+}
+
+.dropdown-menu a {
+    width: 100%;
+}
+
+
+/* --- ESTILOS PARA PANTALLAS GRANDES (VISTA ESCRITORIO) --- */
+@media (min-width: 992px) {
+    /* 1. Ocultamos el botón de menú móvil */
+    .nav-mobile-btn {
+        display: none;
+    }
+
+    /* 2. Mostramos los enlaces de escritorio */
+    .nav-desktop-link {
+        display: flex;
+    }
 }
 
 /* ------------------- */
@@ -404,12 +454,6 @@ main {
         order: 2;
     }
 
-    .main-nav ul {
-        flex-direction: column;
-        align-items: center;
-        padding: 1rem 0;
-    }
-
     main {
         padding: 1rem;
     }
@@ -424,9 +468,6 @@ main {
     }
 }
 
-#menu-departamentos {
-    display: none;
-}
 
 
 
