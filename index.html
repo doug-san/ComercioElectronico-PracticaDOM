@@ -1,70 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Promociones online | Ritmo & Cuerda </title>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="assest/styles/styles.css">
-</head>
+      <!--=============== REMIXICONS ===============-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="assets/css/styles.css">
+      <link rel="stylesheet" href="assets/css/footer.css">
+       <link rel="stylesheet" href="assets/css/main.css">
+
+      <title>Promociones online | Ritmo & Cuerda </title>
+   </head>
 
 <body>
+<div class="page-wrapper">
+      <!--==================== HEADER ====================-->
+      <header class="header" id="header">
+         <nav class="nav container">
+            <a href="index.html" class="nav__logo">Inicio</a>
 
-    <div class="top-banner">
-        <p>COMPRA HOY Y RECIBE HASTA 12 MESES SIN INTERESES*</p>
-    </div>
 
-    <header class="main-header">
-        <div class="header-content">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="img/image-removebg-preview.png" alt="Logo Ritmo & Cuerda">
-                </a>
-            </div>
-
-            <div class="search-bar">
-                <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                <input type="text" placeholder="Buscar">
-            </div>
-
-            <div class="user-options">
-                <a href="#"><i class="fa-solid fa-user"></i></a>
-                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-            </div>
-        </div>
-    </header>
-
-<nav class="main-nav">
-    <ul>
-        <li><a href="index.html">Inicio</a></li>
-
-        <li class="nav-desktop-link"><a href="categoriaViento.html">Vientos</a></li>
-        <li class="nav-desktop-link"><a href="categoriaPercusion.html">Percusión</a></li>
-        <li class="nav-desktop-link"><a href="categoriaPianos.html">Pianos</a></li>
-        <li class="nav-desktop-link"><a href="categoriaGuitaras.html">Guitarras</a></li>
-        <li class="nav-desktop-link"><a href="CategoriaAcesorios.html">Accesorios</a></li>
-
-        <li class="nav-mobile-btn">
-            <a href="#" id="btn-categorias"><i class="fa-solid fa-bars"></i>Categorías</a>
-            
-            <ul class="dropdown-menu" id="menu-categorias">
-                <li><a href="categoriaViento.html">Vientos</a></li>
-                <li><a href="categoriaPercusion.html">Percusión</a></li>
-                <li><a href="categoriaPianos.html">Pianos</a></li>
-                <li><a href="categoriaGuitaras.html">Guitarras</a></li>
-                <li><a href="CategoriaAcesorios.html">Accesorios</a></li>
-            </ul>
+      <div class="nav__menu" id="nav-menu">
+       <ul class="nav__list">
+        <li class="nav__item">
+          <a href="categoriaViento.html" class="nav__link">
+            <i class="ri-arrow-right-up-line"></i>
+            <span>Vientos</span>
+          </a>
+        </li> 
+        <li class="nav__item">
+          <a href="#" class="nav__link">
+            <i class="ri-arrow-right-up-line"></i>
+            <span>Percusión</span>
+          </a>
         </li>
-    </ul>
-</nav>
+                <li class="nav__item">
+          <a href="#" class="nav__link">
+            <i class="ri-arrow-right-up-line"></i>
+            <span>Pianos</span>
+          </a>
+        </li>
+                <li class="nav__item">
+          <a href="#" class="nav__link">
+            <i class="ri-arrow-right-up-line"></i>
+            <span>Guitarras</span>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">
+            <i class="ri-arrow-right-up-line"></i>
+            <span>Accesorios</span>
+          </a>
+        </li>
+      </ul
+          
+      <!--==================== Boton de cerrar ====================-->
+      <div class="nav__close" id="nav-close">
+         <i class="ri-close-large-line"></i>
+      </div>
+      <div class="nav__social">
+  <a href="https://www.instagram.com/" target="_blank" class="nav__social-link">
+    <i class="ri-instagram-line"></i>
+  </a>
+  <a href="https://github.com/" target="_blank" class="nav__social-link">
+    <i class="ri-github-line"></i>
+  </a>
+  <a href="https://dribbble.com/" target="_blank" class="nav__social-link">
+    <i class="ri-dribbble-line"></i>
+  </a>
+  <a href="https://www.linkedin.com/" target="_blank" class="nav__social-link">
+    <i class="ri-linkedin-box-line"></i>
+  </a>
+</div>
+    </div>
+    <!--==================== Toggle Button ====================-->
+    <div class="nav__toggle" id="nav-toggle">
+  <i class="ri-menu-line"></i>
+</div>
+
+   </nav>
 
 <br>
 <br>
@@ -133,10 +151,11 @@
 
 
 
-    <footer class="main-footer">
+<!--==================== Footer ====================-->
+            <footer class="main-footer">
         <div class="footer-content">
             <div class="footer-column">
-                <h3>Ritmo & Cuerda Corporativo</h3>
+                <h3>EmpresaDeMusica Corporativo</h3>
                 <ul>
                     <li><a href="#">Quiénes Somos</a></li>
                     <li><a href="#">Visión y Misión</a></li>
@@ -153,15 +172,16 @@
             </div>
             <div class="footer-column">
                 <h3>Suscríbete</h3>
-                <p id="subscribe-message">Recibe las mejores ofertas.</p>
-                <input id="subscribe-email" type="email" placeholder="tu-correo@ejemplo.com">
-                <button id="subscribe-button">Suscribirme</button>
+                <p>Recibe las mejores ofertas.</p>
+                <input type="email" placeholder="tu-correo@ejemplo.com">
+                <button>Suscribirme</button>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 Distribuidora Ritmo & Cuerda S.A. de C.V. Todos los derechos reservados.</p>
+            <p>&copy; 2025 Distribuidora EmpresaDeMusica S.A. de C.V. Todos los derechos reservados.</p>
         </div>
     </footer>
+    </div>
 
     <script src="script.js"></script>
 <script>
